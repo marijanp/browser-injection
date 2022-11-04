@@ -1,0 +1,12 @@
+{
+  "name": "browser-injection",
+  "version": "0.0.0",
+  "description": "TODO",
+  "private": true,
+  "dependencies": {
+    "path-browserify": "1.0.1"
+  },
+  "browser": {
+    "path": "path-browserify"
+  }
+}
