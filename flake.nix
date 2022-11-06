@@ -16,11 +16,11 @@
       packages.x86_64-linux.inject-browser =
         pkgs.runCommand
           "esbuild"
-          { nativeBuildInputs = [ pkgs.esbuild ]; } ''
+          { nativeBuildInputs = [ pkgs.nodePackages.browserify ]; } ''
           cp ${./main.js} entrypoint.js
           mkdir -p $out
           export NODE_PATH=${(npmlock2nix.node_modules { src = ./.; }) + /node_modules}
-          esbuild --bundle --outfile="$out/main.js" --log-limit=0 entrypoint.js
+          browserify -o "$out/main.js" entrypoint.js
         '';
     };
 }
