@@ -1,0 +1,10 @@
+{
+  "name": "builder",
+  "version": "0.0.0",
+  "description": "Node dependencies for our builder.",
+  "private": true,
+  "dependencies": {
+    "esbuild": "0.15.13",
+    "node-stdlib-browser": "1.2.0"
+  }
+}

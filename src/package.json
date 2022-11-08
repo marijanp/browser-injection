@@ -4,9 +4,8 @@
   "description": "TODO",
   "private": true,
   "dependencies": {
-    "path-browserify": "1.0.1"
-  },
-  "browser": {
-    "path": "path-browserify"
+    "crypto-js": "4.0.0",
+    "request": "2.88.0",
+    "stream-http": "3.2.0"
   }
 }

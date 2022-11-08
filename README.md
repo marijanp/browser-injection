@@ -11,3 +11,7 @@ You can run `nix build .#inject-browser` to see the error message that is thrown
 
 And obviously if I add `--platform=node` the `esbuild` call in the `flake.nix` the build succeeds.
 But I actually want to build for the browser, not for node. How do I achieve this?
+
+### Solution:
+Together with @toastal I wrote the `esbuild` builder (see `flake.nix`) which calls the `esbuild` javascript API with a plugin from [node-stdlib-browser](https://github.com/niksy/node-stdlib-browser), which in turn takes care of replacing node dependencies with the respective browser implementation.
+
